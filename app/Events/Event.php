@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace ServJobs\Events;
 
 abstract class Event
 {

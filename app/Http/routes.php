@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return '<h1> ServJobs Teste  ANA E LOYDE- VACUDA E marizete - Pandorinha </h1>';
 });
+
+//Route::get('/teste', '@lista');
+
