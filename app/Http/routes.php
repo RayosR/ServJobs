@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return '<h1> ServJobs Teste </h1>';
+    return '<h1> ServJobs - Rota Teste </h1>';
 });
 
 //Route::get('/teste', '@lista');
