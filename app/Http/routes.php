@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return '<h1> ServJobs Teste  ANA E LOYDE- VACUDA E marizete - Pandorinha </h1>';
+    return '<h1> ServJobs Teste </h1>';
 });
 
 //Route::get('/teste', '@lista');
