@@ -13,26 +13,26 @@ class CreateProfissionalsTable extends Migration
     public function up()
     {
         Schema::create('profissionals', function (Blueprint $table) {
-            $table->increments('id');
-            $table->varchar(45)('nome');
-			$table->varchar(45)('email');
-			$table->varchar(45)('senha');
-			$table->int('documento');
-			$table->varchar(45)('razaoSocial');
-			$table->varchar(1)('sexo');
-			$table->varchar(45)('endereco');
-			$table->int(10)('telefone');
-			$table->int(11)('celular');
-			$table->varchar(45)('profissao');
-			$table->varchar(45)('registroProfissional');
-			$table->int('numeroRegistro');
-			$table->varchar(2000)('descricao');
-			$table->int('likes');
-			$table->int('deslike');
-			$table->varchar(45)('link1');
-			$table->varchar(45)('link2');
-			$table->varchar(45)('link3');
-			$table->int('visualisacoes');
+            $table->increments('cod');
+           $table->string('nome', 45);
+            $table->string('email', 45);
+            $table->string('senha', 45);
+            $table->integer('documento');
+            $table->string('razaoSocial', 45);
+            $table->string('sexo', 1);
+            $table->string('endereco', 45);
+            $table->integer('telefone');
+            $table->integer('celular');
+            $table->string('profissao', 45);
+            $table->string('registroProfissional', 45);
+            $table->integer('numeroRegistro');
+            $table->string('descricao', 2000);
+            $table->integer('likes');
+            $table->integer('deslike');
+            $table->string('link1', 100);
+            $table->string('link2', 100);
+            $table->string('link3', 100);
+            $table->integer('visualisacoes');
         });
     }
 
