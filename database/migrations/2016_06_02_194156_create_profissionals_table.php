@@ -32,7 +32,7 @@ class CreateProfissionalsTable extends Migration
             $table->string('link1', 100);
             $table->string('link2', 100);
             $table->string('link3', 100);
-            $table->integer('visualisacoes');
+            $table->integer('visualizacoes');
         });
     }
 
