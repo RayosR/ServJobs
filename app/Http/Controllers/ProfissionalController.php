@@ -12,6 +12,14 @@ use ServJobs\Profissional;
 
 class ProfissionalController extends Controller
 {
+    
+    public function lista(){
+		
+		$prof = Profissional::all();
+		
+		return view('profissional.listagem')->withProfissional($prof);
+	}
+
     public function busca{
 
     	$prof = Profissional::all();
@@ -32,7 +40,7 @@ class ProfissionalController extends Controller
 		if($var==1){
 			return view('profissional.formulario');
 		} else{
-			
+
 		}
 		
 	}
