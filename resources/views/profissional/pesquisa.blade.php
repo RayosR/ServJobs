@@ -4,8 +4,9 @@
 
 <form method ="post">
 <fieldset> <table>
-<legend><h2> Pesquisa <h2></legend>
-<td> Profissão: </td> <td> <select name ="UF">
+<legend><h2> Pesquisa </h2></legend>
+<td> Profissão: </td> <td> <select name ="UF" value="Profissão">
+<option value =""> Profissão </option> 
 <option value ="administrador"> Administrador </option> 
 <option value ="bombeiro"> Bombeiro </option> 
 <option value ="carpinteiro"> Carpinteiro </option> 
@@ -27,31 +28,68 @@
 <option value ="veterinario"> Veterinário </option> 
 <option value ="webDesigner"> Web Designer </option> 
 <option value ="xilografo"> Xilografo </option> 
-<option value ="zelador"> Zelador </option>
+<option value ="zelador"> Zelador </option></select></td>
  
-<td><td><td> Localidade: </td></td></td> <td> <select name ="UF">
-<option value ="vilavelha"> Vila Velha - ES </option> 
-<option value ="vitoria"> Vitoria - ES </option> 
-<option value ="macae"> Macaé - RJ </option> 
-<option value ="niteroi"> Niterói - RJ </option> 
-<option value ="santos"> Santos - SP </option> 
-<option value ="tatuape"> Tatuapé - SP </option> 
-<option value ="belohorizonte"> Belo Horizonte - MG </option> 
-<option value ="ouropreto"> Ouro Preto - MG </option> 
-<option value ="feira"> Feira de Santana - BA </option> 
-<option value ="itabuna"> Itabuna - BA </option> 
-<option value ="recife"> Recife - PE </option> 
-<option value ="caruaru"> Caruaru - PE </option> 
-<option value ="fortaleza"> Fortaleza - CE </option> 
-<option value ="jn"> Juazeiro do Norte - CE </option> 
-<option value ="teresina"> Teresina - PI </option> 
-<option value ="bj"> Bom Jesus - PI </option> 
-<option value ="florianopolis"> Florianopolis - SC </option> 
-<option value ="blumenau"> Blumenau - SC </option> 
-<option value ="belem"> Belém - PA </option> 
-<option value ="maraba"> Marabá - PA </option> </td>
-</td> 
+<td> Estado: </td> <td> <select name ="UF" value="UF">
+<option value ="">UF </option> 
+<option value ="ac"> AC </option> 
+<option value ="al"> AL </option> 
+<option value ="am"> AM </option>
+<option value ="ap"> AP </option> 
+<option value ="ba"> BA </option>  
+<option value ="ce"> CE </option> 
+<option value ="df"> DF </option> 
+<option value ="es"> ES </option> 
+<option value ="go"> GO </option> 
+<option value ="ma"> MA </option> 
+<option value ="mg"> MG </option>
+<option value ="ms"> MS </option> 
+<option value ="mt"> MT </option> 
+<option value ="pa"> PA </option>
+<option value ="pb"> PB </option>
+<option value ="pe"> PE </option>  
+<option value ="pi"> PI </option>
+<option value ="pr"> PR </option>  
+<option value ="rj"> RJ </option>
+<option value ="rn"> RN </option>
+<option value ="ro"> RO </option>
+<option value ="rr"> RR </option> 
+<option value ="rs"> RS </option>
+<option value ="sc"> SC </option>
+<option value ="se"> SE </option>
+<option value ="sp"> SP </option> 
+<option value ="to"> TO </option> 
+</td> </select></td>
 
+
+<td> Cidade: </td> <td> <select name ="cidade" value="Cidade">
+<option value =""> Cidade </option> 
+<option value ="vilavelha"> Vila Velha </option> 
+<option value ="vitoria"> Vitoria </option> 
+<option value ="macae"> Macaé </option> 
+<option value ="niteroi"> Niterói</option> 
+<option value ="santos"> Santos </option> 
+<option value ="tatuape"> Tatuapé </option> 
+<option value ="belohorizonte"> Belo Horizonte</option> 
+<option value ="ouropreto"> Ouro Preto </option> 
+<option value ="feira"> Feira de Santana</option> 
+<option value ="itabuna"> Itabuna</option> 
+<option value ="recife"> Recife</option> 
+<option value ="caruaru"> Caruaru</option> 
+<option value ="fortaleza"> Fortaleza</option> 
+<option value ="jn"> Juazeiro do Norte</option> 
+<option value ="teresina"> Teresina</option> 
+<option value ="bj"> Bom Jesus - PI </option> 
+<option value ="florianopolis"> Florianopolis</option> 
+<option value ="blumenau"> Blumenau</option> 
+<option value ="belem"> Belém</option> 
+<option value ="maraba"> Marabá</option>
+</td> </select>
+<td><button type="submit">Buscar</button></td>
+</table>
+</fieldset>
+</form>
+<br>
 @yield('resultado')
 
 @stop
