@@ -20,7 +20,13 @@ class CreateProfissionalsTable extends Migration
             $table->integer('documento');
             $table->string('razaoSocial', 45);
             $table->string('sexo', 1);
-            $table->string('endereco', 45);
+			$table->string('rua', 45);
+			$table->string('numeroCasa', 45);
+			$table->string('complemento', 45);
+			$table->string('cep', 45);
+			$table->string('cidade', 45);
+			$table->string('estado', 45);
+			$table->string('pais', 45);
             $table->integer('telefone');
             $table->integer('celular');
             $table->string('profissao', 45);
