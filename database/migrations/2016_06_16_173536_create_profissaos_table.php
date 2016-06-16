@@ -14,7 +14,7 @@ class CreateProfissaosTable extends Migration
     {
         Schema::create('profissao', function (Blueprint $table) {
             $table->increments('codProfissao');
-            $table->varchar('cargo', 45);
+            $table->String('cargo', 45);
 			$table->timestamps();
         });
     }
