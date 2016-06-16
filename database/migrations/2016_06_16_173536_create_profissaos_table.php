@@ -13,7 +13,7 @@ class CreateProfissaosTable extends Migration
     public function up()
     {
         Schema::create('profissao', function (Blueprint $table) {
-            $table->increments('codprofissao');
+            $table->increments('codProfissao');
             $table->varchar('cargo', 45);
 			$table->timestamps();
         });

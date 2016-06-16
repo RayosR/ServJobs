@@ -13,7 +13,7 @@ class CreateLocalidadesTable extends Migration
     public function up()
     {
         Schema::create('localidade', function (Blueprint $table) {
-            $table->increments('codlocalidade');
+            $table->increments('codLocalidade');
             $table->string('cidade', 45);
 			$table->string('estado', 45);
 			$table->string('uf', 45);

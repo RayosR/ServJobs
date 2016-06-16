@@ -13,7 +13,7 @@ class CreateProfissionalsTable extends Migration
     public function up()
     {
         Schema::create('profissional', function (Blueprint $table) {
-            $table->increments('codprofissional');
+            $table->increments('codProfissional');
             $table->string('nome', 45);
             $table->string('email', 45);
             $table->string('senha', 45);
@@ -37,10 +37,10 @@ class CreateProfissionalsTable extends Migration
             $table->string('link2', 100);
             $table->string('link3', 100);
             $table->integer('visualizacoes');
-			$table->integer('codlocalidade')-> unsigned();
-            $table->foreign('codlocalidade')-> references('codlocalidade') -> on ('localidade');
-            $table->integer('codprofissao')-> unsigned();
-            $table->foreign('codProfissao')-> references('codprofissao') -> on ('profissao');
+			$table->integer('codLocalidade')-> unsigned();
+            $table->foreign('codLocalidade')-> references('codLocalidade') -> on ('localidade');
+            $table->integer('codProfissao')-> unsigned();
+            $table->foreign('codProfissao')-> references('codProfissao') -> on ('profissao');
 			$table->timestamps();
         });
     }
