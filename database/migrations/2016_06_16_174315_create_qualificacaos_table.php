@@ -22,7 +22,7 @@ class CreateQualificacaoTable extends Migration
 			$table->integer('idUsuario')-> unsigned();
 			$table->integer('idUsuario')-> references('id') -> on ('usuarios');
 			$table->integer('codProfissional') -> unsigned();
-			$table->integer('codprofissional') -> references ('codprofissional') -> on ('profissional');
+			$table->integer('codProfissional') -> references ('codprofissional') -> on ('profissional');
 			$table->timestamps();
         });
     }
