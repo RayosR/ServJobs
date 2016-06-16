@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Localidade extends Model
 {
-    protected $table = 'localidade;
+    protected $table = 'localidade';
 }
