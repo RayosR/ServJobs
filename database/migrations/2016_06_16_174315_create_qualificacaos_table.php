@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQualificacaosTable extends Migration
+class CreateQualificacaoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,18 @@ class CreateQualificacaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('qualificacaos', function (Blueprint $table) {
+        Schema::create('qualificacao', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('qualificado');
+			$table->integer('qualificacao');
+			$table->integer('depoimento',450);
+			$table->integer('dataServico');
+			$table->integer('nomeServico');
+			$table->integer('idUsuario')-> unsigned();
+			$table->integer('idUsuario')-> references('id') -> on ('usuarios');
+			$table->integer('codProfissional') -> unsigned();
+			$table->integer('codprofissional') -> references ('codprofissional') -> on ('profissional');
+			$table->timestamps();
         });
     }
 
@@ -25,6 +34,6 @@ class CreateQualificacaosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('qualificacaos');
+        Schema::drop('qualificacao');
     }
 }
