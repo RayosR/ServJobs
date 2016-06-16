@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQualificacaoTable extends Migration
+class CreateQualificacaosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,13 +16,13 @@ class CreateQualificacaoTable extends Migration
             $table->increments('id');
             $table->integer('qualificado');
 			$table->integer('qualificacao');
-			$table->integer('depoimento',450);
-			$table->integer('dataServico');
-			$table->integer('nomeServico');
+			$table->String('depoimento',450);
+			$table->String('dataServico');
+			$table->String('nomeServico');
 			$table->integer('idUsuario')-> unsigned();
-			$table->integer('idUsuario')-> references('id') -> on ('usuarios');
+			$table->foreign('idUsuario')-> references('id') -> on ('usuario');
 			$table->integer('codProfissional') -> unsigned();
-			$table->integer('codProfissional') -> references ('codProfissional') -> on ('profissional');
+			$table->foreign('codProfissional') -> references ('codProfissional') -> on ('profissional');
 			$table->timestamps();
         });
     }
