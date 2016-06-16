@@ -9,13 +9,13 @@ class UsuarioTableSeeder extends Seeder {
 	
 public function run()
 {
-	DB::insert('insert into usuarios
+	DB::insert('insert into usuario
 	(nome, email, senha, cpf)
 	values (?,?,?,?)',
 	array('Phelipe', 'phelipe-alvarenga@hotmail.com',
 	'123', 16222788698 ));
 
-	DB::insert('insert into usuarios
+	DB::insert('insert into usuario
 	(nome, email, senha, cpf)
 	values (?,?,?,?)',
 	array('Leandro', 'leandro_monjardim@hotmail.com',
