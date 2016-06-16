@@ -12,9 +12,13 @@ class CreateLocalidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('localidades', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('localidade', function (Blueprint $table) {
+            $table->increments('codlocalidade');
+            $table->string('cidade', 45);
+			$table->string('estado', 45);
+			$table->string('uf', 45);
+			$table->string('pais', 45);
+			$table->timestamps();
         });
     }
 
@@ -25,6 +29,6 @@ class CreateLocalidadesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('localidades');
+        Schema::drop('localidade');
     }
 }

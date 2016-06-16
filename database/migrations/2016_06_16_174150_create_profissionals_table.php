@@ -12,9 +12,36 @@ class CreateProfissionalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('profissionals', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('profissional', function (Blueprint $table) {
+            $table->increments('codprofissional');
+            $table->string('nome', 45);
+            $table->string('email', 45);
+            $table->string('senha', 45);
+            $table->integer('documento');
+            $table->string('razaoSocial', 45);
+            $table->string('sexo', 1);
+			$table->string('rua', 45);
+			$table->string('numeroCasa', 45);
+			$table->string('bairro', 45);
+			$table->string('complemento', 45);
+			$table->string('cep', 45);
+            $table->integer('telefone');
+            $table->integer('celular');
+            $table->string('profissao', 45);
+            $table->string('registroProfissional', 45);
+            $table->integer('numeroRegistro');
+            $table->string('descricao', 2000);
+            $table->integer('likes');
+            $table->integer('deslike');
+            $table->string('link1', 100);
+            $table->string('link2', 100);
+            $table->string('link3', 100);
+            $table->integer('visualizacoes');
+			$table->integer('codlocalidade')-> unsigned();
+            $table->foreign('codlocalidade')-> references('codlocalidade') -> on ('localidade');
+            $table->integer('codprofissao')-> unsigned();
+            $table->foreign('codProfissao')-> references('codprofissao') -> on ('profissao');
+			$table->timestamps();
         });
     }
 
@@ -25,6 +52,6 @@ class CreateProfissionalsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('profissionals');
+        Schema::drop('profissional');
     }
 }

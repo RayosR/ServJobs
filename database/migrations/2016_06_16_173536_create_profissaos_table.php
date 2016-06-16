@@ -12,9 +12,10 @@ class CreateProfissaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('profissaos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('profissao', function (Blueprint $table) {
+            $table->increments('codprofissao');
+            $table->varchar('cargo', 45);
+			$table->timestamps();
         });
     }
 
@@ -25,6 +26,6 @@ class CreateProfissaosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('profissaos');
+        Schema::drop('profissao');
     }
 }
