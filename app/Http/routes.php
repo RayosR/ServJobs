@@ -15,5 +15,5 @@ Route::get('/', function () {
     return '<h1> ServJobs - Rota Teste </h1>';
 });
 
-//Route::get('/teste', '@lista');
+Route::get('/profissional', 'ProfissionalController@lista');
 
