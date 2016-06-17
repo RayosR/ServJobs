@@ -15,9 +15,10 @@ class ProfissionalController extends Controller
     
     public function lista(){
 		
-		$prof = Profissional::all();
+		$profissional = DB::select('select a.nome, b.cargo, c.cidade, c.uf from profissional a, profissao b, localidade c where a.codLocalidade=c.codLocalidade and a.codProfissao=b.codProfissao');
+
 		
-		return view('profissional.listagem')->withProfissional($prof);
+		return view('profissional.listagem')->with('profissional', $profissional);
 	}
 
     public function busca(){
