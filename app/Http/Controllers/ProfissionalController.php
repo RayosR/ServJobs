@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use ServJobs\Http\Requests;
 
-use Requests;
+use DB;
 
 use ServJobs\Profissional;
 
