@@ -2,19 +2,24 @@
 
 @section('resultado')
 
-<h1>Listagem de profissional</h1>
-	<table>
-	<?php foreach ($profissional as $p): ?>
-			<tr>
-				<td><?= $p->nome ?> </td>
-				<td><?= $p->cargo ?> </td>
-				<td><?= $p->cidade ?> </td>
-				<td><?= $p->uf ?> </td>
-				
-			</tr>
-		<?php endforeach ?>
-	</table>
 
-</form>
 
+	<h1>Listagem de profissional</h1>
+
+<?php foreach ($profissional as $p): ?>
+<div class="team-member">
+          <img src="img/1.jpg" class="img-responsive img-circle" alt="">
+                <b><p class="p1"><?= $p->nome ?></p></b>
+                <p class="p2"><?= $p->cargo ?></p>
+                <p class="p3"><?= $p->cidade ?>/<?= $p->uf ?></p>
+	</div>
+<?php endforeach ?>
+
+
+</div>
+
+	
+</div>
+@yield('cadastro')
 @stop
+
