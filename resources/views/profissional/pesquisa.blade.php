@@ -2,15 +2,67 @@
 
 @section('conteudo')
 
-<form method ="post">
+<a name="Pesquisa"></a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid container"
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Selecione a Profissão <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <?php foreach ($profissional as $p): ?>
+            <li><a href="#"> <?= $p->cargo ?> </a></li>
+            <?php endforeach ?>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Selecione o Estado <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Selecione a Cidade <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-default" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Nome">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+      </form>
+        
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+
+
+<!--<form method ="post" action="/profissional/busca">
+<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 <fieldset> <table>
 <legend><h2> Pesquisa </h2></legend>
-<td> Profissão: </td> <td> <select name ="UF" value="Profissão">
+<td> Profissão: </td> <td> <select name ="profissao">
 <option value =""> Profissão </option> 
 <option value ="administrador"> Administrador </option> 
 <option value ="bombeiro"> Bombeiro </option> 
 <option value ="carpinteiro"> Carpinteiro </option> 
 <option value ="dentista"> Dentista </option> 
+<option value ="desenvolvedor"> Desenvolvedor </option> 
 <option value ="eletricista"> Eletricista </option> 
 <option value ="faxineira"> Faxineira </option> 
 <option value ="ginecologista"> Ginecologista </option> 
@@ -29,8 +81,8 @@
 <option value ="webDesigner"> Web Designer </option> 
 <option value ="xilografo"> Xilografo </option> 
 <option value ="zelador"> Zelador </option></select></td>
- 
-<td> Estado: </td> <td> <select name ="UF" value="UF">
+<!-- 
+<td> Estado: </td> <td> <select name ="UF">
 <option value ="">UF </option> 
 <option value ="ac"> AC </option> 
 <option value ="al"> AL </option> 
@@ -62,7 +114,7 @@
 </td> </select></td>
 
 
-<td> Cidade: </td> <td> <select name ="cidade" value="Cidade">
+<td> Cidade: </td> <td> <select name ="cidade">
 <option value =""> Cidade </option> 
 <option value ="vilavelha"> Vila Velha </option> 
 <option value ="vitoria"> Vitoria </option> 
@@ -84,13 +136,12 @@
 <option value ="blumenau"> Blumenau</option> 
 <option value ="belem"> Belém</option> 
 <option value ="maraba"> Marabá</option>
-</td> </select>
+</td> </select> 
 <td><button type="submit">Buscar</button></td>
 </table>
 </fieldset>
-</form>
-<br>
-@yield('resultado')
+</form>-->
 
+@yield('resultado')
 @stop
 
