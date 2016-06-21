@@ -1,0 +1,25 @@
+.team-member{
+	text-align:center;
+	margin-bottom:50px;
+	float: left;
+	padding-right: 100px;
+}
+.team-member img{
+	margin:0 auto;
+	border:7px solid #fff;
+}
+
+.team-member .p1{
+	margin-top:0;
+	font-size: 18px;
+}
+
+.team-member .p2{
+	margin-top:0;
+	font-size: 18px;
+}
+
+.team-member .p3{
+	margin-top:0;
+	font-size: 18px;
+}
